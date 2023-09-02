@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>RESUME GENERATOR</title>
+    <link rel="icon" type="image/x-icon" href="fav.png" />
+  </head>
+  <body>
+    <div class="container1" id="cv-form">
+      <h2 class="headin">Resume Generator</h2>
+      <h3 class="heading">By Dev Chaudhary</h3>
+      <div class="contain">
+        <p class="para"><u>Personal Information</u></p>
+        <p class="detail">Your Name</p>
+        <div class="input-group">
+          <span class="input-group-text"> Name</span>
+          <input
+            placeholder="Enter Full Name..!!"
+            type="text"
+            aria-label="First name"
+            class="form-control"
+            id="namefield"
+          />
+        </div>
+        <br />
+        <p class="detail">Phone Number</p>
+        <div class="input-group mb-3">
+          <span class="input-group-text">+91</span>
+          <input
+            placeholder="Enter here..!!"
+            type="text"
+            class="form-control"
+            id="phonefield"
+            aria-label="Dollar amount (with dot and two decimal places)"
+          />
+        </div>
+        <p class="detail">Your Address</p>
+        <div class="input-group">
+          <textarea
+            placeholder="Enter here..!!"
+            class="form-control"
+            id="addressfield"
+            aria-label="With textarea"
+            row="2"
+          ></textarea>
+        </div>
+        <br />
+        <p class="sec"><u>Important Link </u></p>
+        <p class="detail">Email-Address</p>
+        <div class="input-group mb-3">
+          <input
+            placeholder="Enter here..!!"
+            type="text"
+            class="form-control"
+            id="emailfeild"
+            placeholder="Email-Address"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+        </div>
+        <p class="detail">Gihub ID</p>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="githubfield"
+            placeholder="Github-ID"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+        </div>
+        <p class="detail">LinkdIn ID</p>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="linkfield"
+            placeholder="LinkdIn-ID"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+        </div>
+        <p class="para"><u>Professional Information</u></p>
+        <br />
+        <p class="detail">Objective</p>
+        <div class="input-group">
+          <textarea
+            placeholder="Enter here..!!"
+            class="form-control"
+            id="objectivefield"
+            aria-label="With textarea"
+          ></textarea>
+        </div>
+        <p class="detail">Work-Experience</p>
+        <div class="input-group" id="we">
+          <textarea
+            placeholder="Enter here..!!"
+            class="form-control wefield"
+            aria-label="With textarea"
+          ></textarea>
+        </div>
+        <button id='addbtn' type="button" class="btn btn-secondary" onclick="create()">
+        Add+
+      </button>
+        <p class="detail">Academic Qualification</p>
+        <div class="input-group" id="aq">
+          <textarea
+            placeholder="EX: xyz Publick School  XII-60%
+     xyz Institue of science and technology cgpa 8.71"
+            class="form-control AQ"
+            aria-label="With textarea"
+            rows="2"
+          ></textarea>
+        </div>
+        <button  type="button" class="btn btn-secondary" onclick="Aq()">
+        Add+
+      </button>
+
+        <p class="detail">Extra-Activities</p>
+        <div class="input-group" id="ea">
+          <textarea
+            placeholder="Enter here..!!"
+            class="form-control activityfield"
+           
+            aria-label="With textarea"
+            rows="2"
+          ></textarea>
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="Ea()">
+        Add+
+      </button>
+
+        <!-- Image Upload -->
+        <div class="img">
+          <div class="input-group mb-3">
+            <input type="file" class="form-control" id="inputGroupFile02" />
+            <label class="input-group-text" for="inputGroupFile02"
+              >Upload</label
+            >
+          </div>
+        </div>
+        <button type="button" class="btn btn-outline-secondary buttn" onclick="generate()">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <!-- CV- Template ..!!  -->
+
+    <div class="container" id="cv-template">
+      <div class="row">
+        <div class="col-md-4 text-center py-5 background colu">
+          <!-- first col -->
+
+          <img src="pic.jpg" alt="Profile Photo" class="profpic" id="imag"/>
+          <div class="container">
+            <p id="nameT">Dev Chaudhary</p>
+            <p id="contactT">
+              <i class="fa fa-phone" style="font-size: 24px"></i>
+              +91-827-280-7336
+            </p>
+            <p id="addressT">38-Shri Nagar Colony,Rambagh(T.Y.C),Agra-6</p>
+            <hr />
+              <i class="fa fa-envelope" style="font-size: 24px"></i><p id="emailT">xxx200@xyz.com</a
+              >
+            </p>
+            <i class="fa fa-github" style="font-size: 36px"></i>
+            <p id="githubT">
+              <a class="fa">github.com/XYZ1234</a>
+            </p>
+            <i class="fa fa-linkedin-square" style="font-size: 36px"></i>
+            <p id="linkedT">
+              <a class="fa"
+                >https://www.linkedin.com/in/XYZ/</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-md-8 py-5">
+          <!-- second col  -->
+
+          <h1 class="text-center" style="font-weight: 980" id="name2T">Dev Chaudhary</h1>
+
+          <!-- Objective Card  -->
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+              <p id="objectiveT">
+                Seeking an entry level position to start my career which would
+                help me in exploring new areas of work in a reputable
+                organization. Dedicated Individual looking for a responsible
+                role in a dynamically stable organization.
+              </p>
+            </div>
+          </div>
+
+          <!-- Work-Experience -->
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Work-Experience</h3>
+            </div>
+            <div class="card-body">
+              <ul id="weT">
+              <li>working with Wipro</li>
+              <li>working with TCS</li>
+              <li>Pursue NCC</li>
+            </ul>
+
+            </div>
+          </div>
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Academic-Qualification</h3>
+            </div>
+            <div class="card-body">
+              <ul id="aqT">
+              <li> xyz Publick School X-60%</li>
+              <li> xyz Publick School XII-66%</li>
+              <li> xyz INSTITUTE OF SCIENCE & TECHNOLOGY Cgpa-8.71</li>
+             </ul>
+            </div>
+            </div>
+
+            <div class="card mt-4">
+              <div class="card-header background">
+                <h3>Extra-Activities</h3>
+              </div>
+              <div class="card-body">
+                <ul id="eaT">
+                <li> Shooting</li>
+                <li> Volleyball</li>
+                <li>  NCC</li>
+              </ul>
+              </div>
+            </div>
+            <div class="container mt-3 text-center">
+              <button type="button" class="print" onclick="print()">Print</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

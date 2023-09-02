@@ -1,0 +1,122 @@
+body{
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+  }
+*{
+    box-sizing: border-box;
+}
+.bg{
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    filter: blur(8px);
+    -webkit-filter: blur(4px);
+}
+.bg-text {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: rgb(158, 125, 140);
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    height: 30vh;
+    padding: 20px;
+    text-align: center;
+    
+  }
+ .bttn{
+    background-color: transparent;
+    border-color: black;
+    color: #f1f1f1;
+    font-size: large;
+    height: 6vh;
+    font-weight: 700;
+ }
+ .con{
+    font-size: larger;
+    color: aliceblue;
+    font-weight: 700;
+    text-decoration: double;
+ }
+
+.headin
+{
+    font-size: 28px;
+    font-weight: 400;
+    color: rgb(38, 67, 133);
+    ;
+    text-align: center;
+}
+.heading
+{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(26, 58, 120);
+
+    text-align: center;
+    font-style: italic;
+
+}
+.contain
+{
+   border-style: solid;
+    width: 100%;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+}
+.para{
+    font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+}
+.detail{
+    font-size: large;
+    font-weight: 400;
+}
+.sec{
+    font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+}
+.buttn{
+  margin-top: 10%;
+  margin-left: 50%;
+}
+.img{
+    margin-top: 20px;
+    width: 50%;
+    
+}
+.profpic{
+    height: 30vh;
+    border-radius: 50%;
+    border-style: solid;    
+}
+
+.background{
+    background-color: rgb(230, 230, 230);
+}
+.colu
+{
+    /* height: 95.5vh; */
+}
+.fa
+{
+    color: black;
+    text-decoration: none;
+}
+
+#cv-template{
+    display: none;
+}
